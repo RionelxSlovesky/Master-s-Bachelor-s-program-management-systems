@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Registration</title>
+</head>
+<body class="authentication">
+    <div class="container">
+        <h1 class="label">Registration</h1>
+        <form class="login_form" method="post" name="form" onsubmit="return validated()">
+            
+            <div class="login_font">Name</div>
+            <input type="text" name="name" class="form_input">
+            <div id="email_error">Please enter your Name</div>
+
+            <div class="login_font login_font2">ID</div>
+            <input type="text" name="id" class="form_input">
+            <div id="email_error">Please enter your ID</div>
+
+            <div class="login_font login_font2">Email</div>
+            <input type="text" name="email" class="form_input">
+            <div id="email_error">Please enter your Email</div>
+
+            <div class="login_font login_font2">University</div>
+            <input type="text" name="university" class="form_input">
+            <div id="email_error">Please enter your University</div>
+
+            <div class="login_font login_font2">Password</div>
+            <input type="password" name="password" class="form_input">
+            <div id="password_error">Please enter your Password</div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script src="valid.js"></script>
+    
+</body>
+
+</html>
