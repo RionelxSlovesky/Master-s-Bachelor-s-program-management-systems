@@ -83,7 +83,7 @@ body.authentication{
 
 
 .wrapper{
-    width: 1100px;
+    width: 1200px;
     height: 98vh;
     margin: auto;
     display: flex;
@@ -97,8 +97,8 @@ body.authentication{
 
 .wrapper ul li {
    background: black;
-   width: 170px;
-   border: 1px solid #fff;
+   width: 165px;
+   border: 3px solid rgb(230, 18, 18);
    height: 50px;
    line-height: 50px;
    text-align: center;
@@ -116,8 +116,8 @@ body.authentication{
 }
 
 .wrapper ul li:hover{
-     background-color: #FFD700;
-     color:rgb(0, 0, 0);
+    color:#181717;
+    background-color:#fad608;
      cursor: pointer;
 
 }
@@ -127,23 +127,46 @@ body.authentication{
 }
 .wrapper ul li:hover > ul{
     display: block;
+ 
 }
 .search-field{
 padding-left: 82px;
 padding-top: 35px;
-width: 30%;
+width: 35%;
+height: 10%;
+
+
 }
 
 #search{
     border-radius: 10px;
-    color: rgb(175, 175, 175);
-    padding: 2.5px 20px;
+    color: rgb(0, 0, 0);
+    padding: 2.5px 40px;
+    border-width: 0.2em;
+    border-color: #ff0d0d;
+    
 }
 button{
-    border-radius: 7px;
-    padding: 1.5px;
-    font-size: 12px;
+    display:inline-block;
+    padding:0.1em 1em;
+    border:0.1em solid #ff0d0d;
+    margin:0 0.3em 0.3em 0;
+    border-radius:1em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:100;
+    color:#fcf3f3;
+    text-align:center;
+    transition:  0.2s;
+    background-color: black;
+    
 }
+
+button:hover{
+    color:#df0909;
+    background-color:#FFFFFF;
+    }
 
 body.home{
     background-image: url(images/BG.jpg);
@@ -158,6 +181,7 @@ footer {
     padding: 25px;
     bottom: 0;
     width: 100%;
+    font-size: 13px;
     height: 2%;
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -204,3 +228,61 @@ footer {
 
 
 }
+
+@media (max-width: 950px){
+    .wrapper{
+        width: 200px;
+        height: 98vh;
+        margin: auto;
+        display: flex;
+        padding-right: 300px;
+    }
+
+    .wrapper ul li {
+        background: black;
+        width: 75px;
+        border: 3px solid rgb(226, 22, 22);
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        font-family: big john;
+        
+     }
+
+     #universities{
+         display: flex;
+         text-align:right;
+         
+        
+     }
+     #uni-list{
+         padding-left: 16px;
+         float: right;
+         
+     }
+     #search{
+        border-radius: 10px;
+        color: rgb(175, 175, 175);
+        padding: 1px 20px;
+    }
+    button{
+        border-radius: 7px;
+        padding: 1px;
+        font-size: 10px;
+      
+    }
+    .search-field{
+        padding-left: 120px;
+        padding-top: 35px;
+        width: 30%;
+        }
+
+    
+    
+}
+
+
+
+
