@@ -3,31 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
         <title>Homepage</title>
 </head>
 <body class="home">
-       <div class="wrapper"> 
-       <ul>
-           <li>About</a></li>
-           <li id="universities">Universities
-               <ul id="uni-list">
-                    <li>NSU</li>
-                    <li>BRAC</li>
-                    <li>IUB</li>
-                </ul>
+       <nav class="navbar"> 
+         <div class="logo">UNI-KHOJ</div>
+           <label for="btn" class="icon">
+               <span class="fa-solid fa-bars"></span>
+           </label>
+           <input type="checkbox" id="btn">
+        
+           
+           <ul>
+            <li><a href="#">About</a></li>
+            <li>
+                 <label for="btn-1" class="show">Universities</label>
+                <a href="#">Universities </a>
+                <input type="checkbox" id="btn-1">
+                 <ul>
+                   <li><a href="#">NSU</a></li>
+                   <li><a href="#">BRAC</a></li>
+                   <li><a href="#">IUB</a></li>
+                 </ul>
             </li>
-            <a href="login.html"><li>Log In</li></a>
-           <li>Feedback</li>
-       </ul>  
-       <div class="search-field">
-           <form>
-        <input type="text" name="search" id="search">
-        <button type="submit">Search</button>
-        </form>
-    </div>
-   </div>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="#">Feedback</a></li>
+           </ul>   
+
+
+      
+       </nav>
+
+    
+
 </body>
 
 <footer>
