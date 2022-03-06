@@ -1,7 +1,8 @@
 body{
-	background-color: #9b93f5;
+	background: url(images/login_bg.jpg);
 	font-family: 'josefin Sans', Sans-serif;
 }
+
 img{
 	position: absolute;
 	width: 100%;

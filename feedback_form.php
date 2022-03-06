@@ -8,7 +8,7 @@
  	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">		
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="Style.css">
+	<link rel="stylesheet" href="style2.css">
 
 </head>
 
@@ -42,15 +42,6 @@
 
 					<label class="col-md-4">Email*<br>
 					<input type="text" id="text" required=""></label>
-			</div>
-
-			<div class="row">
-				<div class="col-md-2"></div>
-				<label class="col-md-4">University*<br>
-					<input type="text" id="text" required="true"></label>
-
-					<label class="col-md-4">Phone*<br>
-					<input type="text" id="text" required="true"></label>
 			</div>
 
 			<div class="row">
