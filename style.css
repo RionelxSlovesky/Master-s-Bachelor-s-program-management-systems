@@ -236,13 +236,7 @@ nav ul ul li a:hover{
      }
 
      .text-box{
-        width: 90%;
-        color: rgb(255, 255, 255);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        text-align: center;
+        display: none;
     }
     
     .text-box h1{
@@ -337,6 +331,8 @@ body.authentication{
     color: #000000;
 }
 
+.login_form #university_error,
+.login_form #name_error,
 .login_form #email_error,
 .login_form #password_error{
     margin-top: 5px;
@@ -348,6 +344,11 @@ body.authentication{
     text-align: center;
     display: none;
 
+}
+
+.authentication_redirect {
+    color: #ffffff;
+    margin-top: 20px;
 }
 
 
