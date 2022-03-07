@@ -14,10 +14,6 @@
 
 <body>	
 
-<div class="view">
-	<img src="Image.jpg">
-</div>
-
 <div class="container">
 	<div class="row">
 		<div class="col-md-2"></div>
