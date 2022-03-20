@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+.text-box{
+    width: 100%;
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
+    padding: 2%;
+    top: 20%;
+    left: 50%;
+    text-align: center;
+}
+
+.text-box h1{
+   font-size: 42px;
+}
+
+
+/*-----navbar----*/
+nav{
+    background-color: #000000;
+}
+
+nav:after{
+    content: '';
+    clear: both;
+    display:table;
+}
+
+nav .logo{
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 40px;
+    
+}
+
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+
+nav ul li{
+    display: inline-block;
+    background: #000000;
+    margin: 0px 5px;
+    
+}
+
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+    
+}
+
+nav ul li a:hover{
+    color: red;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ff0000,
+                0 0 5px #ff0000;
+}
+
+
+nav ul ul{
+    position:fixed;
+    top: 90px;
+    border-top: 3px solid red;
+    opacity: 0;
+    visibility:hidden;
+    transition: top 0.3s;
+}
+
+nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li{
+   position: relative;
+   margin: 0px;
+   width: 150px;
+   float:none;
+   display: list-item;
+   border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+nav ul ul li a{
+    line-height: 50px;
+}
+
+
+nav ul ul li a:hover{
+    color: red;
+    box-shadow: none;
+}
+
+
+.show,.icon, input{
+    display: none;
+}
+
+
+footer {
+    position: fixed;
+    text-align: center;
+    padding: 25px;
+    bottom: 0;
+    width: 100%;
+    font-size: 10px;
+    height: 10%;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
