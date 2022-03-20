@@ -38,7 +38,14 @@ session_start();
                    <li><a href="#">IUB</a></li>
                  </ul>
             </li>
-            <li><a href="login.php">Log In</a></li>
+            
+            <?php 
+              if(isset($_SESSION['name'])){
+                echo "<li><a href='logout.php'>Log Out</a></li>";
+              }else{
+                echo "<li><a href='login.php'>Log In</a></li>";
+              }
+            ?>
             <li><a href="feedback_form.php">Feedback</a></li>
            </ul>   
          </nav>
@@ -58,7 +65,7 @@ session_start();
         </p1>
       </section> 
 
-      <section class="about" style="background-color:#000000;" >
+      <section class="about" style="background-color:#000000;width:100%;" >
         <h1 style="color:#ff0000;">Write reviews and become famous!</h1>
         <p1 style="color:#ff0000;">
             Write reviews and gain exposure as students enroll to a program through your reviews! Also add social media credentials to your profile if you want people to reach out to you.
@@ -69,11 +76,6 @@ session_start();
         
       <section class="contact">
         <h1>Contact Us</h1>
-        <p1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-           Praesentium ab minima culpa? Distinctio iste animi eum quaerat
-        
-        </p1>
       </section> 
 
 </body>
@@ -81,7 +83,6 @@ session_start();
 
 <footer>
     <p>© All Rights Reserved<br>
-    <a href="logout.php">Logout</a>
 </footer>
 
 </html>
