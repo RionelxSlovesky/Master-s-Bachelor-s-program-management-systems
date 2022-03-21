@@ -8,7 +8,7 @@
  	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">		
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href="Style2.css">
 
 </head>
 
@@ -22,11 +22,11 @@
 			<h1 class="text-center mt-5 font-weight-bold">Provide your feedback below</h1>
 			<hr class="bg-white">
 			<h3 class="mt-4">Express your experience?</h3>
-
-			<form>
+             
+			<form class= "formf"action = "php/feedbacksubmission.php" method = "POST">
 				<label class="radio-inline"><input type="radio" name="experience" value="bad">Bad</label>
-				<label class="radio-inline"><input type="radio" name="experience" value="bad">Average</label>
-				<label class="radio-inline"><input type="radio" name="experience" value="bad">Good</label>
+				<label class="radio-inline"><input type="radio" name="experience" value="average">Average</label>
+				<label class="radio-inline"><input type="radio" name="experience" value="good">Good</label>
 
 			</div>
 			</div>					
@@ -34,16 +34,16 @@
 			<div class="row">
 				<div class="col-md-2"></div>
 				<label class="col-md-4">Full Name*<br>
-					<input type="text" id="text" required="true" ></label>
+					<input type="text" id="text" name="fullname" ></label>
 
-					<label class="col-md-4">Email*<br>
-					<input type="text" id="text" required=""></label>
+					<label class="col-md-4">Email*><br>
+					<input type="text" id="text" name="email" ></label>
 			</div>
 
 			<div class="row">
 				<div class="col-md-2"></div>
 				<label class="col-md-8">Message*<br>
-					<textarea id="message" required="true" placeholder="Write yor message here" cols="48" rows="5"></textarea></label>
+					<textarea id="message" name="message" placeholder="Write yor message here" cols="48" rows="5"></textarea></label>
 			</div>
 
             <div class="row">

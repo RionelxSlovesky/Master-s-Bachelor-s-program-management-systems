@@ -10,6 +10,11 @@ body{
 
 label{
 	color: #000;
+
+}
+
+form input{
+	width: 20%;
 }
 
 #text{
@@ -18,7 +23,7 @@ label{
 	padding-left: 10px;
 	font-size: 14px;
 	border: none;
-	width: 100%;
+	width: 50%;
 	color: #000;
 }
 
