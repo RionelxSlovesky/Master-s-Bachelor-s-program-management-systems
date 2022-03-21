@@ -5,9 +5,13 @@
     font-family:sans-serif;
 }
 
+body{
+    background-color: black;
+}
+
 .text-box{
     width: 100%;
-    background-color: #ff0000;
+    background-color: rgb(206, 14, 14);
     color: rgb(0, 0, 0);
     padding: 2%;
     top: 20%;
@@ -112,15 +116,76 @@ nav ul ul li a:hover{
     display: none;
 }
 
+/*-----comment----*/
 
-footer {
-    position: fixed;
-    text-align: center;
-    padding: 25px;
-    bottom: 0;
-    width: 100%;
-    font-size: 10px;
-    height: 10%;
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+#unicomment{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
+
+@media all and (max-width: 968px){
+    nav ul{
+        margin-right: 0px;
+        float: left;
+    }
+
+    nav .logo{
+        padding-left: 30px;
+        width: 100%;
+    }
+    nav ul li{
+        display: block;
+        width: 100%;
+        
+    }
+    nav ul ul li{
+       display: block;
+       width: 100%;
+       bottom: 0px;;
+   }
+   nav ul ul{
+       top: 70px;
+       position: static;
+       border-top: none;
+       float: none;
+       display: none;
+       opacity: 1;
+       visibility: visible;
+   }
+   .show{
+       display: block;
+       color: white;
+       font-size: 18px;
+       padding: 0 20px;
+       line-height: 70px;
+       cursor: pointer;
+      
+   }
+   nav ul li a:hover{
+       box-shadow: none;
+   }
+   .show:hover{
+       color: red;
+   }
+   
+   .icon{
+       display: block;
+       color: white;
+       position: absolute;
+       right: 40px;
+       line-height: 70px;
+       font-size: 25px;
+       cursor: pointer;
+   }
+   .show + a, ul{
+       display: none;
+   }
+    [id^=btn]:checked + ul{
+        display: block;
+    }
+   
+   
+}
+

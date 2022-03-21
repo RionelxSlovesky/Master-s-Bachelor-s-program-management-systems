@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans",sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+#back{
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  background-color: #ff0000;;
+}
+
+#back a{
+  margin-left: 5%;
+}
+
+#table-container{
+  background-color: #000000;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-table{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: min(1600px, 100%);
+  margin: auto;
+}
+
+.pricing-card{
+  flex: 1;
+  max-width: 40%;
+  padding: 50px;
+  background-color: #fff;
+  margin: 20px 10px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  color: #2d2d2d;
+}
+
+.pricing-table li{
+  padding: 8%;
+}
+
+@media screen and (max-width:1100px){
+  .pricing-card{
+    flex: 50%;
+  }
+}

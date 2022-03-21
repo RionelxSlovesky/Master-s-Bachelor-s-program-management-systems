@@ -27,13 +27,13 @@ session_start();
         
            
            <ul>
-            <li><a href="#">About</a></li>
+            <li><a href="index.php">Home</a></li>
             <li>
                  <label for="btn-1" class="show">Universities</label>
                 <a href="#">Universities </a>
                 <input type="checkbox" id="btn-1">
                  <ul>
-                   <li><a href="#">NSU</a></li>
+                   <li><a href="unipage.php">NSU</a></li>
                    <li><a href="#">BRAC</a></li>
                    <li><a href="#">IUB</a></li>
                  </ul>
@@ -82,7 +82,7 @@ session_start();
 
 
 <footer>
-    <p>© All Rights Reserved<br>
+    <p>© All Rights Reserved</p>
 </footer>
 
 </html>

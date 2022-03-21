@@ -62,7 +62,7 @@ nav ul{
     float: right;
     list-style: none;
     margin-right: 40px;
-    position: relative;
+    position: fixed;
 }
 
 
@@ -235,10 +235,6 @@ nav ul ul li a:hover{
      [id^=btn]:checked + ul{
          display: block;
      }
-
-     .text-box{
-        display: none;
-    }
     
     .text-box h1{
        font-size: 42px;
