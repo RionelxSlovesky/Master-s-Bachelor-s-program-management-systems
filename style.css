@@ -62,7 +62,7 @@ nav ul{
     float: right;
     list-style: none;
     margin-right: 40px;
-    position: fixed;
+    position: relative;
 }
 
 
@@ -91,7 +91,7 @@ nav ul li a:hover{
 
 
 nav ul ul{
-    position:absolute;
+    position:fixed;
     top: 90px;
     border-top: 3px solid red;
     opacity: 0;
@@ -118,10 +118,12 @@ nav ul ul li a{
     line-height: 50px;
 }
 
+
 nav ul ul li a:hover{
     color: red;
     box-shadow: none;
 }
+
 
 .show,.icon, input{
     display: none;
@@ -235,11 +237,10 @@ nav ul ul li a:hover{
      [id^=btn]:checked + ul{
          display: block;
      }
-    
-    .text-box h1{
-       font-size: 42px;
-       color: #ffffff;
-    }
+
+    .text-box h1, h2{
+        display: none;
+     }
     
     .text-box h2{
         margin: 10px 0 40px;

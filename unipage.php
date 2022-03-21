@@ -13,6 +13,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
 </head>
 <body>
    <section class="header">
@@ -36,6 +37,7 @@ session_start();
                    <li><a href="#">IUB</a></li>
                  </ul>
             </li>
+            <li><a href="compare.php">Compare</a></li>
             
             <?php 
               if(isset($_SESSION['name'])){
@@ -66,8 +68,8 @@ session_start();
     </div>
 
     <form action="post" id="unicomment">
-        <input type="text" style="display: inline-block;">
-        <button name="commentbtn" type="submit">Submit</button>
+        <input type="text" style="display: inline-block; width:17.5%;">
+        <button name="commentbtn" class="Submit" type="submit">Submit</button>
     </form>
 
 </body>

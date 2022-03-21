@@ -24,9 +24,9 @@
 			<h3 class="mt-4">Express your experience?</h3>
              
 			<form class= "formf"action = "php/feedbacksubmission.php" method = "POST">
-				<label class="radio-inline"><input type="radio" name="experience" value="bad">Bad</label>
-				<label class="radio-inline"><input type="radio" name="experience" value="average">Average</label>
-				<label class="radio-inline"><input type="radio" name="experience" value="good">Good</label>
+				<label class="radio-inline"><input type="checkbox" name="experience" value="bad">Bad</label>
+				<label class="radio-inline"><input type="checkbox" name="experience" value="average">Average</label>
+				<label class="radio-inline"><input type="checkbox" name="experience" value="good">Good</label>
 
 			</div>
 			</div>					
@@ -36,7 +36,7 @@
 				<label class="col-md-4">Full Name*<br>
 					<input type="text" id="text" name="fullname" ></label>
 
-					<label class="col-md-4">Email*><br>
+					<label class="col-md-4">Email*<br>
 					<input type="text" id="text" name="email" ></label>
 			</div>
 

@@ -38,6 +38,7 @@ session_start();
                    <li><a href="#">IUB</a></li>
                  </ul>
             </li>
+            <li><a href="compare.php">Compare</a></li>
             
             <?php 
               if(isset($_SESSION['name'])){

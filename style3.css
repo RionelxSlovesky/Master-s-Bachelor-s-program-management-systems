@@ -125,6 +125,15 @@ nav ul ul li a:hover{
     margin-bottom: 5%;
 }
 
+#unicomment input{
+    padding: 10px;
+}
+
+#unicomment button{
+    margin-left: 1%;
+    padding: 10px 20px;
+}
+
 @media all and (max-width: 968px){
     nav ul{
         margin-right: 0px;
@@ -169,6 +178,20 @@ nav ul ul li a:hover{
    .show:hover{
        color: red;
    }
+   .Submit{
+    width: 17.5%; 
+    position: absolute; 
+    margin-left: 31.3%;
+   }
+   #commentbtn{
+	outline: none;
+	border: none;
+	padding: 10px 0px 0px 15px;
+	font-size: 16px;
+	color:#000;
+	border-radius: 5px;
+	width: 100%
+}
    
    .icon{
        display: block;
@@ -186,6 +209,4 @@ nav ul ul li a:hover{
         display: block;
     }
    
-   
 }
-
