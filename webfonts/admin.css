@@ -1,0 +1,73 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+
+.navbar{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: black;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navbar ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navbar ul li:hover
+{
+    background: yellow;
+}
+
+.navbar ul li:nth-child(1):hover
+{
+    background: transparent;
+}
+
+.navbar ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: azure;
+}
+
+.navbar ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+

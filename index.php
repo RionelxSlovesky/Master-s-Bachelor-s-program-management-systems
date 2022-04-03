@@ -67,8 +67,8 @@ session_start();
       </section> 
 
       <section class="about" style="background-color:#000000;width:100%;" >
-        <h1 style="color:#ff0000;">Write reviews and become famous!</h1>
-        <p1 style="color:#ff0000;">
+        <h1 style="color:white;">Write reviews and become famous!</h1>
+        <p1 style="color:white;">
             Write reviews and gain exposure as students enroll to a program through your reviews! Also add social media credentials to your profile if you want people to reach out to you.
         
         </p1>
