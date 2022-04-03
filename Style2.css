@@ -4,7 +4,7 @@ body{
 }
 
 .radio-inline{
-	
+	width :50% ;
 	cursor: pointer;
 }
 
@@ -39,10 +39,10 @@ form input{
 .Submit{
     width: 17.5%; 
     position: absolute; 
-    margin-left: 35%;
+    margin-left: 43%;
 }
 .Back{
     width: 17%; 
     position:absolute; 
-    margin-left: 10.5%;
+    margin-left: 13.5%;
 }
