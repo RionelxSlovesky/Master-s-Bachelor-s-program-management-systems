@@ -32,7 +32,7 @@ session_start();
                 <a href="#">Universities </a>
                 <input type="checkbox" id="btn-1">
                  <ul>
-                   <li><a href="unipage.php">NSU</a></li>
+                   <li><a href="programlist.php">NSU</a></li>
                    <li><a href="#">BRAC</a></li>
                    <li><a href="#">IUB</a></li>
                  </ul>

@@ -5,20 +5,19 @@ session_start();
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
-        <title>Homepage</title>
 </head>
 <body>
-    <section class="home">
-       <nav class="navbar"> 
+   <section class="header">
+   <nav class="navbar"> 
          <div class="logo">UNI-KHOJ</div>
            <label for="btn" class="icon">
                <span class="fa-solid fa-bars"></span>
@@ -50,40 +49,22 @@ session_start();
             <li><a href="feedback_form.php">Feedback</a></li>
            </ul>   
          </nav>
-       
-         <div class="text-box">
-              <h1>Preferred University Nikhoj?</h1>
-              <h2> TRY UNI-KHOJ</h2>
-         </div>
 
-      </section> 
-   
-      <section class="about">
-        <h1>Read reviews, compare programs & set your preferences!</h1>
-        <p1>
-            With an average of over a hundred reviews per program, we help guide you to the one that suits you! We are the only platform providing such service in Bangladesh. 
-        
-        </p1>
-      </section> 
+   </section>
 
-      <section class="about" style="background-color:#000000;width:100%;" >
-        <h1 style="color:white;">Write reviews and become famous!</h1>
-        <p1 style="color:white;">
-            Write reviews and gain exposure as students enroll to a program through your reviews! Also add social media credentials to your profile if you want people to reach out to you.
-        
-        </p1>
-      </section> 
+    <div class="text-box" style="background-color: yellow">
 
-        
-      <section class="contact">
-        <h1>Contact Us</h1>
-      </section> 
+        <h1>List of Courses: </h1>
+    </div>
+
+    <div class="text-box" style="background-color: black;text-align: justify;">
+              <ul style="color: white">
+                  <li>North South University</li>
+                  <li>BRAC University</li>
+                  <li>Independent University of Bangladesh</li>
+              </ul>
+    </div>
+
 
 </body>
-
-
-<footer>
-    <p>© All Rights Reserved</p>
-</footer>
-
 </html>
