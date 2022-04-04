@@ -77,6 +77,7 @@ session_start();
         
       <section class="contact">
         <h1>Contact Us</h1>
+        <li><a href="map.php">Corporate Office-Bashundhara,Dhaka-1229,Bangladesh </a></li>
       </section> 
 
 </body>

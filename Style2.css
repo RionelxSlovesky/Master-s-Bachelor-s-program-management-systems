@@ -4,7 +4,11 @@ body{
 }
 
 .radio-inline{
+<<<<<<< HEAD
+	width :50% ;
+=======
 	width: 50%;
+>>>>>>> 20d34cad97cfe2f5063f56d8be7daf3486a0b6a2
 	cursor: pointer;
 }
 
@@ -39,10 +43,18 @@ form input{
 .Submit{
     width: 17.5%; 
     position: absolute; 
+<<<<<<< HEAD
+    margin-left: 43%;
+=======
     margin-left: 55.5%;
+>>>>>>> 20d34cad97cfe2f5063f56d8be7daf3486a0b6a2
 }
 .Back{
     width: 17%; 
     position:absolute; 
+<<<<<<< HEAD
+    margin-left: 13.5%;
+=======
     margin-left: 16%;
+>>>>>>> 20d34cad97cfe2f5063f56d8be7daf3486a0b6a2
 }
