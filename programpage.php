@@ -31,10 +31,10 @@ session_start();
                  <label for="btn-1" class="show">Universities</label>
                 <a href="#">Universities </a>
                 <input type="checkbox" id="btn-1">
-                 <ul>
-                   <li><a href="programlist.php">NSU</a></li>
-                   <li><a href="#">BRAC</a></li>
-                   <li><a href="#">IUB</a></li>
+                <ul>
+                   <li><a href="programlist.php" href="index.php?university=NSU">NSU</a></li>
+                   <li><a href="programlist.php" href="index.php?university=BRAC">BRAC</a></li>
+                   <li><a href="programlist.php" href="index.php?university=IUB">IUB</a></li>
                  </ul>
             </li>
             <li><a href="compare.php">Compare</a></li>

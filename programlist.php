@@ -1,6 +1,12 @@
 <?php
 
+include 'config.php';
+
 session_start();
+
+error_reporting(0);
+
+
 
 ?>
 
@@ -31,10 +37,10 @@ session_start();
                  <label for="btn-1" class="show">Universities</label>
                 <a href="#">Universities </a>
                 <input type="checkbox" id="btn-1">
-                 <ul>
-                   <li><a href="programlist.php">NSU</a></li>
-                   <li><a href="#">BRAC</a></li>
-                   <li><a href="#">IUB</a></li>
+                <ul>
+                   <li><a href="programlist.php" href="index.php?university=NSU">NSU</a></li>
+                   <li><a href="programlist.php" href="index.php?university=BRAC">BRAC</a></li>
+                   <li><a href="programlist.php" href="index.php?university=IUB">IUB</a></li>
                  </ul>
             </li>
             <li><a href="compare.php">Compare</a></li>
@@ -52,17 +58,25 @@ session_start();
 
    </section>
 
-    <div class="text-box" style="background-color: yellow">
+    <div class="text-box" style="background-color: yellow;">
 
         <h1>List of Courses: </h1>
     </div>
 
     <div class="text-box" style="background-color: black;text-align: justify;">
-              <ul style="color: white">
-                  <li>North South University</li>
-                  <li>BRAC University</li>
-                  <li>Independent University of Bangladesh</li>
-              </ul>
+    <?php
+
+      $university = $_GET['university'];
+
+      $program = "SELECT * FROM programs WHERE university='BRAC'";
+      $result = mysqli_query($conn, $program);
+
+      while ($row = mysqli_fetch_array($result)) {
+        echo "<b>{$row['program']}</b>";
+        echo "<br />";
+        }
+
+    ?>
     </div>
 
 

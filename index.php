@@ -58,9 +58,9 @@ session_start();
                 <a href="#">Universities </a>
                 <input type="checkbox" id="btn-1">
                  <ul>
-                   <li><a href="programlist.php">NSU</a></li>
-                   <li><a href="#">BRAC</a></li>
-                   <li><a href="#">IUB</a></li>
+                   <li><a href="programlist.php" href="index.php?university=NSU">NSU</a></li>
+                   <li><a href="programlist.php" href="index.php?university=BRAC">BRAC</a></li>
+                   <li><a href="programlist.php" href="index.php?university=IUB">IUB</a></li>
                  </ul>
             </li>
             <li><a href="compare.php">Compare</a></li>
@@ -102,7 +102,8 @@ session_start();
         
       <section class="contact">
         <h1>Contact Us</h1>
-
+        
+        <h2>Email: uni-khoj@gmail.com</h2>
         <h2>Contact number: 017171717171-72</h2>
         <br>
         <div id="map"></div>
