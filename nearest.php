@@ -18,10 +18,10 @@
 
 <html>
     <head>
-
+    <link rel="stylesheet" href="location.css">
     </head>
-    <body>
-
+    <body class="main">
+          <div class="container">
             <table>
                 <tr>
                     <th>University</th>
@@ -32,7 +32,7 @@
                     <td><?php echo htmlentities($result->distance); ?></td>
                 </tr>
             </table>
-        
+            </div>
     </body>
 </html>
 
