@@ -1,5 +1,6 @@
 <?php
 
+include 'config.php';
 session_start();
 
 ?>
@@ -68,10 +69,27 @@ session_start();
     </div>
 
     <div class="text-box" style="background-color: yellow;">
-        <h2>Total Credits: </h2>
+      
+        <?php 
+           $sql = "SELECT * FROM `programs` WHERE university= '$university' AND program= '$program'";
+
+           
+           $result = $conn->query($sql);
+
+           if ($result->num_rows > 0) {
+            // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "Total Credits: ". $row["total_credit"]. "<br>";
+            echo "Total Cost: ". $row["total_cost"]. "<br>";
+          
+        }
+        } else {
+            echo "0 results";
+        }
+        ?>
     </div>
     <div class="text-box" style="background-color: yellow;">
-        <h2>Estimated Total Cost: </h2>
+      
     </div>
 
     <form action="post" id="unicomment">
