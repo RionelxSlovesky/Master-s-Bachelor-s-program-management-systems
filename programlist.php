@@ -72,7 +72,8 @@ error_reporting(0);
       $result = mysqli_query($conn, $program);
 
       while ($row = mysqli_fetch_array($result)) {
-        echo "<a href='programpage.php?university=$university'>{$row['program']}</a>";
+        $program = $row['program'];
+        echo "<a href='programpage.php?university=$university&program=$program'>{$row['program']}</a>";
         echo "<br />";
         }
 

@@ -124,7 +124,7 @@ $sql = "SELECT * FROM `universities`";
                 $selected2 = $_POST["program1"];
                 
 
-                $sql3 = "SELECT * FROM `programs` WHERE 'university'= '$selected1' AND 'program'= '$selected2'";
+                $sql3 = "SELECT * FROM `programs` WHERE university= '$selected1' AND program= '$selected2'";
 
                 
 
@@ -133,7 +133,9 @@ $sql = "SELECT * FROM `universities`";
                 if ($result->num_rows > 0) {
                     // output data of each row
                 while($row = $result->fetch_assoc()) {
-                  echo "id: " . $row["total_credit"]. " - Name: " . $row["total_cost"]. " " . $row["ratings"]. "<br>";
+                    echo "Total Credits: ". $row["total_credit"]. "<br>";
+                    echo "Total Cost: ". $row["total_cost"]. "<br>";
+                    echo "Ratings: ". $row["ratings"]. "<br>";
                 }
                 } else {
                     echo "0 results";
@@ -147,8 +149,6 @@ $sql = "SELECT * FROM `universities`";
         
         ?>
         </li>
-        <li>Estimated Total Cost</li>
-        <li>Ratings</li>
       </ul>
     </div>
     <div class="pricing-card">

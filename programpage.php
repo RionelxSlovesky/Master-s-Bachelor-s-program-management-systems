@@ -53,8 +53,14 @@ session_start();
    </section>
 
     <div class="text-box" style="background-color: yellow">
-        <h1 style="color:black;">Uniname</h1>
-        <h2>ProgramName</h2>
+        <?php 
+          $university = $_GET['university'];
+          $program = $_GET['program'];
+
+          echo '<h1 style="color:black;">' . $university . '</h1>';
+          echo '<h2 style="color:black;">' . $program . '</h2>';
+          
+        ?>
     </div>
 
     <div class="text-box" style="background-color: black;text-align: justify;">
