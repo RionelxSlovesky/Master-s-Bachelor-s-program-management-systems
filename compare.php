@@ -4,6 +4,8 @@ include 'config.php';
 
 session_start();
 
+error_reporting(0);
+
 $sql = "SELECT * FROM `universities`";
 
 ?>
@@ -133,15 +135,29 @@ $sql = "SELECT * FROM `universities`";
                 if ($result->num_rows > 0) {
                     // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo "Total Credits: ". $row["total_credit"]. "<br>";
-                    echo "Total Cost: ". $row["total_cost"]. "<br>";
-                    echo "Ratings: ". $row["ratings"]. "<br>";
+                    $_SESSION['uni'] = $row["university"];
+                    $_SESSION['prog'] = $row["program"];
+                    $_SESSION['total_credit'] = $row["total_credit"];
+                    $_SESSION['total_cost'] = $row["total_cost"];
+                    $_SESSION['ratings'] = $row["ratings"];
+
                 }
                 } else {
                     echo "0 results";
                 }
                 
   
+            }
+
+
+            if (is_null($_SESSION['total_credit'])) {
+                    
+            }else{
+                echo "University: ". $_SESSION['uni']. "<br>";
+                echo "Program: ". $_SESSION['prog']. "<br>";
+                echo "Total Credit: ". $_SESSION['total_credit']. "<br>";
+                echo "Estimated Total Cost: ". $_SESSION['total_cost']. "<br>";
+                echo "Rating: ". $_SESSION['ratings'];
             }
 
             
@@ -153,19 +169,23 @@ $sql = "SELECT * FROM `universities`";
     </div>
     <div class="pricing-card">
       <ul>
-        <li style="font-size: 30px;"><select name="Category">
+        <li>
+        <form action="compare.php" method="post">
+        <div>
+        <select name="university2" id="university2">
             <?php 
                 // use a while loop to fetch data 
                 // from the $all_categories variable 
                 // and individually display as an option
-                $all_universities = mysqli_query($conn,$sql);
-                while ($university = mysqli_fetch_array(
-                        $all_universities,MYSQLI_ASSOC)):; 
+                $sql4 = "SELECT * FROM `universities`";
+                $all_universities2 = mysqli_query($conn,$sql1);
+                while ($university2 = mysqli_fetch_array(
+                        $all_universities2,MYSQLI_ASSOC)):; 
             ?>
-                <option value="<?php echo $university["id"];
+                <option value="<?php echo $university2["university"];
                     // The value we usually set is the primary key
                 ?>">
-                    <?php echo $university["university"];
+                    <?php echo $university2["university"];
                         // To show the category name to the user
                     ?>
                 </option>
@@ -173,17 +193,117 @@ $sql = "SELECT * FROM `universities`";
                 endwhile; 
                 // While loop must be terminated
             ?>
-        </select></li>  
-        <li style="font-size: 24px;">CourseName</li>
-        <li>Total Credits</li>
-        <li>Estimated Total Cost</li>
-        <li>Ratings</li>
+        </select>
+        </div>
+        <input type="submit" value="Select">
+        </form>
+
+        <script type="text/javascript">
+                document.getElementById('university2').value = "<?php echo $_POST["university2"];?>";
+        </script>
+
+    </li>  
+        <li style="font-size: 24px;">
+        <form action="compare.php" method="post">
+            <div>
+            <select name="program2" id="program2">>
+            <?php 
+
+
+                
+
+                
+                if (is_null($_POST["university2"])) {
+                    
+                  } else {
+                    $selected2 = $_POST["university2"];
+                    $_SESSION['university2'] = $selected2;
+                    
+                  }
+                
+                
+
+                
+                
+
+                $sql2 = "SELECT * FROM `programs` WHERE university= '$selected2'";
+
+                $all_programs2 = mysqli_query($conn,$sql2);
+                while ($program2 = mysqli_fetch_array(
+                        $all_programs2,MYSQLI_ASSOC)):; 
+            ?>
+                <option value="<?php echo $program2["program"];
+                    // The value we usually set is the primary key
+                ?>">
+                    <?php echo $program2["program"];
+                        // To show the category name to the user
+                    ?>
+                </option>
+            <?php 
+                endwhile; 
+                // While loop must be terminated
+            ?>
+            </select>
+            </div>
+            <input type="submit" value="Select">
+            </form>
+        </li>
+        <li>
+        <?php
+
+
+if (is_null($_POST["program2"])) {
+        
+} else {
+
+    $selected1 = $_SESSION['university2'];
+
+
+
+    $selected2 = $_POST["program2"];
+    
+
+    $sql3 = "SELECT * FROM `programs` WHERE university= '$selected1' AND program= '$selected2'";
+
+    
+
+    $result = $conn->query($sql3);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $_SESSION['uni2'] = $row["university"];
+        $_SESSION['prog2'] = $row["program"];
+        $_SESSION['total_credit2'] = $row["total_credit"];
+        $_SESSION['total_cost2'] = $row["total_cost"];
+        $_SESSION['ratings2'] = $row["ratings"];
+
+    }
+    } else {
+        echo "0 results";
+    }
+    
+
+}
+
+
+if (is_null($_SESSION['total_credit2'])) {
+        
+}else{
+    echo "University: ". $_SESSION['uni2']. "<br>";
+    echo "Program: ". $_SESSION['prog2']. "<br>";
+    echo "Total Credit: ". $_SESSION['total_credit2']. "<br>";
+    echo "Estimated Total Cost: ". $_SESSION['total_cost2']. "<br>";
+    echo "Rating: ". $_SESSION['ratings2'];
+}
+
+
+
+
+?>
+        </li>
       </ul>
     </div>
-
-  <div id="back" style="background-color:black;">
-    <button type="submit" class="compare" id="comparebtn">COMPARE</button>
-  </div>
 
   </div>
 </div>
