@@ -38,9 +38,9 @@ error_reporting(0);
                 <a href="#">Universities </a>
                 <input type="checkbox" id="btn-1">
                 <ul>
-                   <li><a href="programlist.php" href="index.php?university=NSU">NSU</a></li>
-                   <li><a href="programlist.php" href="index.php?university=BRAC">BRAC</a></li>
-                   <li><a href="programlist.php" href="index.php?university=IUB">IUB</a></li>
+                   <li><a href="programlist.php?university=NSU">NSU</a></li>
+                   <li><a href="programlist.php?university=BRAC">BRAC</a></li>
+                   <li><a href="programlist.php?university=IUB">IUB</a></li>
                  </ul>
             </li>
             <li><a href="compare.php">Compare</a></li>
@@ -60,7 +60,7 @@ error_reporting(0);
 
     <div class="text-box" style="background-color: yellow;">
 
-        <h1>List of Courses: </h1>
+        <h1 style="color:black;">List of Courses: </h1>
     </div>
 
     <div class="text-box" style="background-color: black;text-align: justify;">
@@ -68,11 +68,11 @@ error_reporting(0);
 
       $university = $_GET['university'];
 
-      $program = "SELECT * FROM programs WHERE university='BRAC'";
+      $program = "SELECT * FROM programs WHERE university='$university'";
       $result = mysqli_query($conn, $program);
 
       while ($row = mysqli_fetch_array($result)) {
-        echo "<b>{$row['program']}</b>";
+        echo "<a href='programpage.php?university=$university'>{$row['program']}</a>";
         echo "<br />";
         }
 
