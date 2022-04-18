@@ -14,7 +14,32 @@ session_start();
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
-        <title>Homepage</title>
+    <title>Homepage</title>
+
+    <style type="text/css">
+
+          
+
+    </style>
+
+    <script>
+      let map ;
+      function initMap() {
+       // The location of NSU
+      const nsu = { lat: 23.81513, lng: 90.42555 };
+       // The map, centered at NSU
+      const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 16,
+      center: nsu,
+  });
+      // The marker, positioned at NSU
+      const marker = new google.maps.Marker({
+      position: nsu,
+      map: map,
+      });
+}
+</script>
+
 </head>
 <body>
     <section class="home">
@@ -34,12 +59,12 @@ session_start();
                 <a href="#">Universities </a>
                 <input type="checkbox" id="btn-1">
                  <ul>
-                   <li><a href="unipage.php">NSU</a></li>
-                   <li><a href="#">BRAC</a></li>
-                   <li><a href="#">IUB</a></li>
+                  <li><a href="programlist.php?university=NSU">NSU</a></li>
+                  <li><a href="programlist.php?university=BRAC">BRAC</a></li>
+                  <li><a href="programlist.php?university=IUB">IUB</a></li>
                  </ul>
             </li>
-            <li><a href="compare.php">Compare</a></li>
+            <li><a href="features.php">Features</a></li>
             
             <?php 
               if(isset($_SESSION['name'])){
@@ -78,14 +103,21 @@ session_start();
         
       <section class="contact">
         <h1>Contact Us</h1>
-        <li><a href="map.php">Corporate Office-Bashundhara,Dhaka-1229,Bangladesh </a></li>
+        
+        <h2>Email: uni-khoj@gmail.com</h2>
+        <h2>Contact number: 017171717171-72</h2>
+        <br>
+        <div id="map"></div>
+
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVO6LFnF0cNs6cgxPwk8X_etkAPYi5yFA&callback=initMap&v=weekly" async></script>
+      <h2>Corporate Office-Bashundhara,Dhaka-1229,Bangladesh</h2>
       </section> 
+
+      
 
 </body>
 
-
-<footer>
-    <p>© All Rights Reserved</p>
-</footer>
 
 </html>

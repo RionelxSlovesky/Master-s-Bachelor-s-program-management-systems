@@ -128,13 +128,39 @@ nav ul ul li a:hover{
 .show,.icon, input{
     display: none;
 }
- /*-----About-----*/
+
+/*-----About-----*/
+
+
+.about{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 80vh;
+    margin: auto;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.about h1{
+    color: #000000;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.about p1{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
  
 /*---contact us---*/
 .contact{
     background-color: rgb(206, 14, 14);
     width: 100%;
-    height: 50vh;
+    height: 80vh;
     margin: auto;
     text-align: center;
     padding-top: 100px;
@@ -153,6 +179,12 @@ nav ul ul li a:hover{
     line-height: 22px;
     padding: 10px;
 }
+
+#map{
+    width:50vw;
+    height:30vh;
+    margin: auto;
+}  
 
 @media all and (max-width: 968px){
      nav ul{
@@ -224,6 +256,10 @@ nav ul ul li a:hover{
         font-size: 22px;
         color: #ffffff;
      }
+
+     .contact h2{
+        display: block;
+    }
     
 }
 
