@@ -28,6 +28,7 @@ session_start();
            
            <ul>
             <li><a href="index.php">Home</a></li>
+            <li><a href="profile.php">Profile</a></li>
             <li>
                  <label for="btn-1" class="show">Universities</label>
                 <a href="#">Universities </a>

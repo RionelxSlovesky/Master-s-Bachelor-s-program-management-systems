@@ -1,0 +1,47 @@
+/*==========================HEADER*/
+nav.navbar-inverse{
+	height:80px;
+	position:fixed;
+	width:100%;
+	top:0;
+	z-index:999;
+}
+/*===================================*/
+.input-field{
+	border: 5px groove cornflowerblue;
+	border-radius: 10px;
+	width: 25em;
+	padding: .5em 2em 2em 2em;
+	margin:1em 5em 5em 3em;
+	height:23em;
+	margin-left: 40%;
+}
+.reg-input-field{
+	border: 5px groove cornflowerblue;
+	border-radius: 10px;
+	width: 25em;
+	padding: .5em 2em 2em 2em;
+	margin:1em 5em 5em 3em;
+	height:45em;
+	margin-left: 40%;
+}
+.profile-input-field{
+	border: 5px groove cornflowerblue;
+	border-radius: 10px;
+	width: 25em;
+	padding: .5em 2em 2em 2em;
+	margin:1em 5em 5em 3em;
+	height:35em;
+	margin-left: 40%;
+}
+.myoutput{
+	border: 3px groove green;
+	border-radius: 10px;
+	margin:7em 5em 0em 5em;
+}
+h3{
+	text-align:center;
+}
+h1{
+	margin-left: 45%;
+}

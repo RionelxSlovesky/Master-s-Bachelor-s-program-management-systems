@@ -16,14 +16,14 @@
 <script>
     let map ;
     function initMap() {
-  // The location of Uluru
+  // The location of Unikhoj
   const nsu = { lat: 23.81513, lng: 90.42555 };
-  // The map, centered at Uluru
+  // The map, centered at Unikhoj
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 4,
     center: nsu,
   });
-  // The marker, positioned at Uluru
+  // The marker, positioned at Unikhoj
   const marker = new google.maps.Marker({
     position: nsu,
     map: map,
