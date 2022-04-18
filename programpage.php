@@ -3,6 +3,8 @@
 include 'config.php';
 session_start();
 
+error_reporting(0);
+
 ?>
 
 
@@ -38,7 +40,7 @@ session_start();
                    <li><a href="programlist.php?university=IUB">IUB</a></li>
                  </ul>
             </li>
-            <li><a href="compare.php">Compare</a></li>
+            <li><a href="features.php">Features</a></li>
             
             <?php 
               if(isset($_SESSION['name'])){
@@ -65,7 +67,26 @@ session_start();
     </div>
 
     <div class="text-box" style="background-color: black;text-align: justify;">
-        <p style="color: white "> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At et nisi dolor esse molestias voluptatibus laudantium ullam numquam labore, eaque qui quis eligendi officia atque itaque exercitationem modi eius facere fugit dolorem, ad iusto distinctio. Repudiandae veritatis neque et. Consequatur asperiores itaque ipsum atque tenetur eum ut corporis animi minima incidunt tempore aut, molestiae excepturi illum eius quasi accusamus impedit architecto culpa fuga quae consectetur ab! Repellendus officiis earum tempore natus esse distinctio numquam ratione odit rem illo! Libero, ducimus nesciunt reprehenderit eaque consequatur impedit minima! Nostrum deleniti ullam, nemo minus voluptatibus ratione placeat. Neque error iure harum eius libero nulla repellendus commodi. Ex dolorum, placeat accusantium tenetur quod saepe autem blanditiis voluptatum! Asperiores facilis, explicabo quisquam, modi nemo nulla itaque eius quos maxime sequi porro aliquid voluptatem quis non ab, eveniet temporibus voluptatibus reprehenderit natus ex optio ipsam consectetur voluptates dignissimos. Provident, assumenda? Nesciunt dolorum doloribus perspiciatis nam a recusandae atque in animi tempore? Aliquid placeat nesciunt, necessitatibus vitae optio eveniet corrupti nihil magnam alias delectus fuga ipsam sunt excepturi dolores ducimus sint dolorum numquam quibusdam dicta quam blanditiis qui fugiat. Obcaecati nemo sit adipisci ipsum, necessitatibus repellat neque. Quis totam assumenda nulla corrupti soluta eius dolores quae, sint placeat, voluptas itaque doloremque? Tenetur dolorum cupiditate fugiat eum reprehenderit id nisi voluptatibus, harum cum necessitatibus ratione perferendis, ab quis. Reiciendis quo voluptatum accusantium iusto adipisci nobis id dignissimos expedita, excepturi facilis sit aperiam impedit amet quae, velit quasi corrupti voluptate, animi dolores ab. Neque eius voluptatum, reiciendis illum, iusto, fugit officiis alias quos ratione nostrum porro rerum accusamus. Inventore omnis harum itaque voluptatum beatae commodi? Totam ut ipsa dolores a quae iste sint quasi debitis ducimus aperiam esse repellat magnam expedita velit reiciendis quod, praesentium itaque veritatis asperiores culpa maiores fugit? Voluptas pariatur at expedita aliquam quas hic ea.</p>   
+    <?php
+
+$sql = "SELECT * FROM `programs` WHERE university= '$university' AND program= '$program'";
+
+           
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+ // output data of each row
+ while($row = $result->fetch_assoc()) {
+
+  echo '<p style="color: white ">' .$row["description"]. '</p>';   
+
+ }
+} else {
+ echo "0 results";
+}
+
+    ?>
+        
     </div>
 
     <div class="text-box" style="background-color: yellow;">
@@ -78,24 +99,79 @@ session_start();
 
            if ($result->num_rows > 0) {
             // output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo "Total Credits: ". $row["total_credit"]. "<br>";
-            echo "Total Cost: ". $row["total_cost"]. "<br>";
+            while($row = $result->fetch_assoc()) {
+              echo "Total Credits: ". $row["total_credit"]. "<br>";
+              echo "Total Cost: ". $row["total_cost"]. "<br>";
           
-        }
-        } else {
+            }
+          } else {
             echo "0 results";
+          }
+
+        $sql = "SELECT AVG(user_rating) AS avg FROM review_table WHERE university= '$university' AND program= '$program'";
+
+        $result = $conn->query($sql); 
+
+        if ($result->num_rows > 0) {
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+            echo "Ratings: ". $row["avg"]. "<br>";
+        
+          }
+        } else {
+          echo "0";
         }
+
         ?>
     </div>
     <div class="text-box" style="background-color: yellow;">
       
     </div>
 
-    <form action="post" id="unicomment">
-        <input type="text" style="display: inline-block; width:17.5%;">
-        <button name="commentbtn" class="Submit" type="submit">Submit</button>
-    </form>
+    <?php
+      $username = $_SESSION['name'];
+      $user_id = $_SESSION['id'];
+
+      if(isset($_SESSION['name'])){
+    ?>
+        <form action = "comment.php?university=$university&program=$program" method="post" id="unicomment">
+        <input type="text" name="user_id" value="<?php echo $user_id; ?>" style="display: none; width:17.5%; color:black;">
+          <input type="text" name="username" value="<?php echo $username; ?>" style="display: none; width:17.5%; color:black;">
+          <input type="text" name="university" value="<?php echo $university; ?>"  style="display: none; width:4%; color:black;">
+          <input type="text" name="program" value="<?php echo $program; ?>"  style="display: none; width:4%; color:black;">
+          Rating: <input type="number" name="rating" style="display: inline-block; width:4%; color:black;" min="0" max="5">
+          Comment: <input type="text" name="comment" style="display: inline-block; width:17.5%; color:black;">
+          <button name="commentbtn" class="Submit" type="submit" style="color:black; background-color:yellow;">Submit</button>
+        </form>
+      <?php
+      }
+      ?>
+
+
+
+      <h2>Reviews:</h2><br><br>
+
+    
+
+
+    
+
+    <?php
+
+      $comment = "SELECT * FROM review_table WHERE university='$university' AND program='$program'";
+      $result = mysqli_query($conn, $comment);
+
+      while ($row = mysqli_fetch_array($result)) {
+        $comment = $row['program'];
+        echo '<h2>' . $row['user_name'] . '</h2>';
+        echo 'Rating: ' . $row['user_rating'];
+        echo "<br />";
+        echo $row['user_review'];
+        echo "<br />";
+        echo "<br />";
+        }
+
+    ?>
 
 </body>
 </html>

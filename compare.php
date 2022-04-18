@@ -139,7 +139,6 @@ $sql = "SELECT * FROM `universities`";
                     $_SESSION['prog'] = $row["program"];
                     $_SESSION['total_credit'] = $row["total_credit"];
                     $_SESSION['total_cost'] = $row["total_cost"];
-                    $_SESSION['ratings'] = $row["ratings"];
 
                 }
                 } else {
@@ -148,6 +147,20 @@ $sql = "SELECT * FROM `universities`";
                 
   
             }
+
+            $sql = "SELECT AVG(user_rating) AS avg FROM review_table WHERE university= '$selected1' AND program= '$selected2'";
+
+        $result = $conn->query($sql); 
+
+        if ($result->num_rows > 0) {
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+            $_SESSION['ratings'] = $row["avg"];
+        
+          }
+        } else {
+          echo "0";
+        }
 
 
             if (is_null($_SESSION['total_credit'])) {
@@ -276,12 +289,26 @@ if (is_null($_POST["program2"])) {
         $_SESSION['prog2'] = $row["program"];
         $_SESSION['total_credit2'] = $row["total_credit"];
         $_SESSION['total_cost2'] = $row["total_cost"];
-        $_SESSION['ratings2'] = $row["ratings"];
+        
 
     }
     } else {
         echo "0 results";
     }
+
+    $sql = "SELECT AVG(user_rating) AS avg FROM review_table WHERE university= '$selected1' AND program= '$selected2'";
+
+        $result = $conn->query($sql); 
+
+        if ($result->num_rows > 0) {
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+            $_SESSION['ratings2'] = $row["avg"];
+        
+          }
+        } else {
+          echo "0";
+        }
     
 
 }

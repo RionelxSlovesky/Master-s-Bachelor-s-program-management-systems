@@ -60,24 +60,14 @@ error_reporting(0);
 
     <div class="text-box" style="background-color: yellow;">
 
-        <h1 style="color:black;">List of Courses: </h1>
+        <h1 style="color:black;">Features: </h1>
     </div>
 
     <div class="text-box" style="background-color: black;text-align: justify;">
-    <?php
 
-      $university = $_GET['university'];
-
-      $program = "SELECT * FROM programs WHERE university='$university'";
-      $result = mysqli_query($conn, $program);
-
-      while ($row = mysqli_fetch_array($result)) {
-        $program = $row['program'];
-        echo "<a href='programpage.php?university=$university&program=$program'>{$row['program']}</a>";
-        echo "<br />";
-        }
-
-    ?>
+        <h2><a href="compare.php">Compare Universities!</a></h2><br><br>
+        <h2><a href="location.php">Find the distance between you and the universities!</a></h2>
+              
     </div>
 
 

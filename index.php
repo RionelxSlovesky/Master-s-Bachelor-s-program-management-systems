@@ -63,7 +63,7 @@ session_start();
                   <li><a href="programlist.php?university=IUB">IUB</a></li>
                  </ul>
             </li>
-            <li><a href="compare.php">Compare</a></li>
+            <li><a href="features.php">Features</a></li>
             
             <?php 
               if(isset($_SESSION['name'])){
